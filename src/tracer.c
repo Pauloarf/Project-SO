@@ -17,6 +17,7 @@ int main(int argc, char *argv[]){
                     printf("Running PID %d\n",getpid());
                     printf("(output do programa)\n");
                     gettimeofday(&tv,NULL);
+                    
                 }
                 else{
                     //parse da string
