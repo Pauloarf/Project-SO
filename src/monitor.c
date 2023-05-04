@@ -9,9 +9,10 @@
 
 int main(int argc, char *argv[])
 {
+    char buffer[1024];
     int make1 = mkfifo("fifo_cliente_servidor", O_RDONLY);
     int make2 = mkfifo("fifo_servidor_cliente", O_WRONLY);
-    
+
     if (make1 == -1)
     {
         perror("Error opening pipe cliente_servidor");
@@ -22,7 +23,8 @@ int main(int argc, char *argv[])
         perror("Error opening pipe servidor_cliente");
     }
     
-
+    int fd = open("fifo_cliente_servidor", O_RDONLY);
+    //write
     // abrir as pipes
 
     // ler o que vem das pipes (PID e timestamp(inical))
