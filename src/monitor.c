@@ -9,9 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-    char buffer[1024];
-    int make1 = mkfifo("fifo_cliente_servidor", O_RDONLY);
-    int make2 = mkfifo("fifo_servidor_cliente", O_WRONLY);
+    int make1 = mkfifo("fifo_cliente_servidor",0666);
+    int make2 = mkfifo("fifo_servidor_cliente",0666);
 
     if (make1 == -1)
     {
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
         perror("Error opening pipe servidor_cliente");
     }
     
-    int fd = open("fifo_cliente_servidor", O_RDONLY);
+    //int fd = open("fifo_cliente_servidor", O_RDONLY);
     //write
     // abrir as pipes
 
