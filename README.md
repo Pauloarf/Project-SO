@@ -15,3 +15,6 @@ There are three debugger configurations included: `Debug Client`, `Debug Server`
 This project contains a set of extensions that are required for the debugger to work. VSCode marks them as "recommended", but they are mandatory.
 
 <img src="./docs/repo/gun.png" alt="I'm no longer asking." width="400"/>
+
+## Final Grade
+18
